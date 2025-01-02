@@ -1,0 +1,7 @@
+<script>
+  ClassicEditor
+    .create(document.querySelector('#p1'))
+    .catch(error => {
+      console.error(error);
+    });
+</script>
