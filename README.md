@@ -2,8 +2,7 @@
 # Webový projekt "Bylinky"
 
 
-
-# 1. Úvod
+# (1) Úvod
 Živá ukázka: 🌐 [https://bylinky.edumach.cz/](https://bylinky.edumach.cz/)
 
 Web se skládá ze **tří** hlavních částí:
@@ -27,7 +26,7 @@ Další funkcionality:
 5. Web bude tvořit 9 dílčích souborů.
 
 
-#  2. Založení projektu, databáze
+#  (2) Založení projektu, databáze
 
 ## Instalace
 
@@ -57,7 +56,7 @@ Nejprve je nutné vytvořit databázovou tabulku a pro začátek do ní přidat 
 ⬆️ Importujte SQL dotaz `bylinky.sql`
 
 
-## Soubor `head.inc.php`
+## Soubor `head.inc.php`
 
 Obsahuje inormace k připojení k databázi.
 
@@ -124,7 +123,7 @@ Web Bylinky se zobrazuje se dvěma články.
 
 ---
 
-# 3. Formuláře
+# (3) Formuláře
 Přidávat články přímo v databázovém systému si možné je, ale příliš komfortní to není. A nejen to.
 
 Také si uvědomte, že autor webu nemusí být (a často není) jeho uživatelem. Nelze očekávat, že každý uživatel bude zároveň odborníkem na databázové systémy.
@@ -306,10 +305,9 @@ Na URL se zobrazuje web Bylinky se dvěma články. V zápatí je odkaz, kterým
 
 ---
 
-#  4. Editace a smazání článku
+#  (4) Editace a smazání článku
 
 ## Soubor `edit.php`
-
 
 ###  Odkaz na soubor `edit.php`
 
@@ -345,7 +343,7 @@ Na URL `https://tux.panska.cz/~10XPrijmeniJ/bylinky` se zobrazuje web Bylinky se
 ---
 
 
-#  5. CKEditor
+#  (5) CKEditor
 
 CKeditor je open source WYSIWYG textový editor, který lze použít na webových stránkách. Zaměřuje se na nízkou náročnost a okamžitou použitelnost.
 
@@ -390,7 +388,7 @@ U všech textarea bude integrovaný CKEditor.
 
 ---
 
-# 6. Přihlašování a odhlašování
+# (6) Přihlašování a odhlašování
 
 **Přihlašování**: Uživatel zadá jméno a heslo v `login.php`. Pokud jsou údaje správné, uloží se do proměnné `$_SESSION['prihlasen']`.
 
