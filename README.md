@@ -61,16 +61,15 @@ Založíme databázi `bylinky`, uživatele `bylinkar` s heslem `heslo123` a nast
 > SHOW GRANTS FOR 'bylinkar'@'localhost';
 ```
 
-⬆️ Importujte SQL dotaz `bylinky.sql`
+## Databázová tabulka
 
+Nejprve je nutné vytvořit databázovou tabulku a pro začátek do ní přidat alespoň jeden článek. Další přidáme později.
+
+Importujte SQL dotaz `bylinky.sql`:
 
 ```sql
 $ sudo mariadb -D bylinky < bylinky.sql
 ```
-
-## Databázová tabulka `clanky`
-
-Nejprve je nutné vytvořit databázovou tabulku a pro začátek do ní přidat alespoň jeden článek. Další přidáme později.
 
 
 ## Soubor `head.inc.php`
