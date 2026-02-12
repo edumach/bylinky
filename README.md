@@ -33,8 +33,9 @@ Další funkcionality:
 Knovonámi repozitáře z GitHubu
 
 ```
+$ sudo chown -R user:www-data /var/www/html
 $ cd /var/www/html
-$ sudo git clone https://github.com/edumach/bylinky
+$ git clone https://github.com/edumach/bylinky
 $ cd bylinky 
 ```
 
@@ -42,18 +43,34 @@ $ cd bylinky
 
 Tento soubor obsahuje hlavičku HTML stránky (bez koncových značek `</body>` a `</html>` - ty budou až v souboru `index.php`). Do ostatních souborů se vkládá PHP příkazem [include](https://www.w3schools.com/php/php_includes.asp). Výhodou je, že **jeden společný blok kódu znamená snadnou úpravu nebo rozšíření**. Toto je v PHP velmi častý koncept. Ppouze pro odlišení má v názvu `inc`.
 
-## Databáze bylinky
+## Databáze `bylinky`
+
+Založíme databázi `bylinky`, uživatele `bylinkar` s heslem `heslo123` a nastavíme mu práva k databázi `bylinky`:
 
 ```sql
 > CREATE DATABASE bylinky;
-> USE bylinky;
+> CREATE USER 'bylinkar'@'localhost' IDENTIFIED BY 'heslo123';
+> GRANT ALL PRIVILEGES ON bylinky.* TO 'bylinkar'@'localhost';
+> FLUSH PRIVILEGES;
+```
+
+"Výstupní" kontrola:
+
+```sql
+> SHOW DATABASES;
+> SHOW GRANTS FOR 'bylinkar'@'localhost';
+```
+
+⬆️ Importujte SQL dotaz `bylinky.sql`
+
+
+```sql
+$ sudo mariadb -D bylinky < bylinky.sql
 ```
 
 ## Databázová tabulka `clanky`
 
 Nejprve je nutné vytvořit databázovou tabulku a pro začátek do ní přidat alespoň jeden článek. Další přidáme později.
-
-⬆️ Importujte SQL dotaz `bylinky.sql`
 
 
 ## Soubor `head.inc.php`
