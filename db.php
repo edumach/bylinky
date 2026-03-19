@@ -1,25 +1,17 @@
 <?php
-$host = 'localhost'; //ve vztahu k Apache je lokální
-$dbname = ''; //název databáze
-$user = '';   //uživatel
-$password = ''; //heslo
-//název samotné tabulky se sem nezadává - ta bude až součástí SQL dotazů v PHP skriptech.
-
-// Připojení k databázi
 try
 {
-  // Vytvoření nového PDO objektu pro připojení k MySQL databázi.
-  // Parametry: hostitel, název databáze, znaková sada, uživatelské jméno a heslo.
-  $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
+  // vytvoření PDO připojení k SQLite
+  $pdo = new PDO("sqlite:bylinky.db");
 
-  // Nastavení režimu zpracování chyb na vyvolávání výjimek (Exceptions).
-  // Díky tomu se při chybě v komunikaci s databází vrátí podrobné informace o problému.
+  // zapnutí výjimek pro chyby
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+  // (volitelné) zapnutí podpory cizích klíčů
+  $pdo->exec("PRAGMA foreign_keys = ON");
 }
 catch (PDOException $e)
 {
-  // Zpracování výjimky v případě chyby při připojení k databázi.
-  // Skript se ukončí a zobrazí chybovou zprávu.
   die("Chyba připojení: " . $e->getMessage());
 }
 ?>
