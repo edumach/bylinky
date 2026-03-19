@@ -1,10 +1,10 @@
 CREATE TABLE clanky
 (
-  "id" INTEGER PRIMARY KEY AUTOINCREMENT,
-  "nadpis" TEXT,
-  "obrazek" TEXT,
-  "popis" TEXT,
-  "vyuziti" TEXT
+  id int PRIMARY KEY AUTO_INCREMENT,
+  nadpis varchar(255),
+  obrazek varchar(255),
+  popis text,
+  vyuziti text
 );
 
 
