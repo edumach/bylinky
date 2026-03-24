@@ -42,5 +42,6 @@ include "head.inc.php";
     <button type="button" onclick="window.history.back();">Zrušit změny</button>
 </form>
 
+</div>
 </body>
 </html>
