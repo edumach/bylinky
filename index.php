@@ -25,5 +25,6 @@ include "head.inc.php";
 
 <p>&copy; <?= date("Y"); ?> Bylinky</p>
 
+</div>
 </body>
 </html>
