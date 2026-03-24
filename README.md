@@ -20,7 +20,7 @@ Data o bylinkách zobrazených v těle budou v databázové tabulce v této stru
 Další funkcionality:
 
 1. Pomocí tlačítek půjdou data přidat, upravit nebo smazat.
-2. Z důvodu jednoduchosti nebude ostylovaný pomocí CSS. To si necháme na konec.
+2. Je ostylovaný pouze v nezbytném rozsahu.
 3. Administrace obsahu bude pod loginem (jméno + heslo).
 4. Pohodlné psaní článků bude zajišťovat CKEditor.
 5. Web bude tvořit 9 dílčích souborů.
