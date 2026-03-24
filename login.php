@@ -33,5 +33,6 @@ include "head.inc.php";
   <button type="submit">Přihlásit</button>
 </form>
 
+</div>
 </body>
 </html>
