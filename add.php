@@ -32,5 +32,6 @@ include "head.inc.php";
     <button type="submit">Přidat článek</button>
 </form>
 
+</div>
 </body>
 </html>
